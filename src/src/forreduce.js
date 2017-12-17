@@ -6,4 +6,5 @@ for (var count = 0, loops = animals.length; count < loops; count++){
     item = animals[count];
     total += item.length;
 }
+//for loop ends
 console.log(total); //10
