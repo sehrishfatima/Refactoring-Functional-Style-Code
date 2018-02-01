@@ -2,14 +2,13 @@ var fs = require('fs');
 var esprima = require('esprima');
 var estraverse = require('estraverse');
 var escodegen = require('escodegen');
-
+const util = require('util')
 var filename = process.argv[2];
 console.log('Processing', filename);
-var ast = esprima.parse(fs.readFileSync('./map.js', { encoding: 'utf8'}));
 var done = false;
 var loopAST;
 
-function createLoopTemplate(name){
+/*function createLoopTemplate(name){
     var looptemplate =  {
         "type": "ForStatement",
         "init": {
@@ -138,72 +137,196 @@ function createLoopTemplate(name){
 
     return looptemplate;
 
+}*/
+
+function forEachReturn(arrayName) {
+    console.log(arrayName);
+ return   {
+        "type"
+    :
+        "ForStatement",
+            "init"
+    :
+        {
+            "type"
+        :
+            "VariableDeclaration",
+                "declarations"
+        :
+            [
+                {
+                    "type": "VariableDeclarator",
+                    "id": {
+                        "type": "Identifier",
+                        "name": "i"
+                    },
+                    "init": {
+                        "type": "Literal",
+                        "value": 0,
+                        "raw": "0"
+                    }
+                }
+            ],
+                "kind"
+        :
+            "var"
+        }
+    ,
+        "test"
+    :
+        {
+            "type"
+        :
+            "BinaryExpression",
+                "operator"
+        :
+            "<",
+                "left"
+        :
+            {
+                "type"
+            :
+                "Identifier",
+                    "name"
+            :
+                "i"
+            }
+        ,
+            "right"
+        :
+            {
+                "type"
+            :
+                "MemberExpression",
+                    "computed"
+            :
+                false,
+                    "object"
+            :
+                {
+                    "type"
+                :
+                    "Identifier",
+                        "name"
+                :
+                    arrayName
+                }
+            ,
+                "property"
+            :
+                {
+                    "type"
+                :
+                    "Identifier",
+                        "name"
+                :
+                    "length"
+                }
+            }
+        }
+    ,
+        "update"
+    :
+        {
+            "type"
+        :
+            "UpdateExpression",
+                "operator"
+        :
+            "++",
+                "argument"
+        :
+            {
+                "type"
+            :
+                "Identifier",
+                    "name"
+            :
+                "i"
+            }
+        ,
+            "prefix"
+        :
+            false
+        }
+    ,
+        "body"
+    :
+        {
+            "type"
+        :
+            "BlockStatement",
+                "body"
+        :
+            [
+                {
+                    "type": "ExpressionStatement",
+                    "expression": {
+                        "type": "CallExpression",
+                        "callee": {
+                            "type": "MemberExpression",
+                            "computed": false,
+                            "object": {
+                                "type": "Identifier",
+                                "name": "console"
+                            },
+                            "property": {
+                                "type": "Identifier",
+                                "name": "log"
+                            }
+                        },
+                        "arguments": [
+                            {
+                                "type": "MemberExpression",
+                                "computed": true,
+                                "object": {
+                                    "type": "Identifier",
+                                    "name": arrayName
+                                },
+                                "property": {
+                                    "type": "Identifier",
+                                    "name": "i"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+};
+
+function generate_the_ast(recievedCode){
+    var ast = esprima.parse(recievedCode);
+    estraverse.replace(ast,{
+        enter: function (node) {
+            if (node.type == 'ExpressionStatement' &&
+                    node.expression.callee.property.name == "forEach")
+            {
+                var arrayName = node.expression.callee.object.name;
+                //var body = node.expression.arguments;
+
+                return forEachReturn(arrayName);
+
+            }
+        },
+        leave: function (node, parent) {
+
+        }
+    });
+
+    console.log(escodegen.generate(ast));
+
+}
+function read_it(filename,cb){
+
+
+    //...
+    cb(code)
 }
 
-
-estraverse.replace(ast, {
-    enter: function(node){
-        if(done)
-            return this.break();
-        if (node.type === 'MemberExpression'){
-            //if(node.property.name=="map"){
-            //console.log('Encountered assignment to', node.property.name);
-
-            var callee = node.callee.object.name;
-
-            var loopAST = createLoopTemplate(callee);
-            done = true;
-            /*node.type === 'ForStatement';
-            node.init.type === 'AssignmentExpression';
-            node.init.operator === '=';
-            node.init.left.type === 'Identifier';
-            node.init.left.name === 'count';
-
-            node.init.right.type === 'Identifier';
-            node.init.right.value === '0';
-            node.init.right.value === '0';*/
-            //}
-        }
-    },
-
-    leave: function (node, parent) {
-        // if (node.type == 'VariableDeclarator')
-
-        if (done)
-            console.log(node.callee.object.name);
-        return this.break();
-    }
-});
-
-escodegen.generate(loopAST);
-
-
-/*
-//var esprima = require('esprima');
-  var estraverse = require('estraverse');
-  var escodegen = require('escodegen');
-
-  (function () {
-    //build an ast with 2 lines of code
-    var ast = esprima.parse("console.log('1');\n console.log('2');")
-    console.log("original code:\n" + escodegen.generate(ast));
-    console.log();
-
-    //remove one of the lines, works!
-    var done = false;
-    ast = estraverse.replace(ast, {
-      enter: function (node) {
-        if (done)
-          return this.break();
-        if (node.type === esprima.Syntax.ExpressionStatement) {
-          done = true;
-          this.remove();
-        }
-      },
-      leave: function (node) {
-        if (done)
-          return this.break();
-      }
-    });
-    console.log("removed node:\n" + escodegen.generate(ast));
-  })()*/
+function main(){
+    var code = fs.readFileSync('./foreach.js', { encoding: 'utf8'});
+    generate_the_ast(code);
+}
+main();
