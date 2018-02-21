@@ -163,12 +163,14 @@ function generate_the_ast(recievedCode){
     console.log(escodegen.generate(ast));
 
 }
+/*
 function read_it(filename,cb){
 
 
     //...
     cb(code)
 }
+*/
 
 function main(){
     //console.log('one level up')
