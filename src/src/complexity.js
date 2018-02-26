@@ -6,6 +6,7 @@ var escomplex = require("escomplex");
 var escodegen = require('escodegen');
 var sloc = require('sloc');
 
+/*
 var previousFile = fs.readFileSync('../../in/'+filename, 'utf8');
 var newFile = fs.readFileSync('../../out/'+fileOutput, 'utf8');
 
@@ -13,6 +14,7 @@ var functionsBefore = findComplexity(previousFile);
 var functionsAfter = findComplexity(newFile);
 var slocBefore = sloc(previousFile, "js");
 var slocAfter = sloc(newFile, "js");
+*/
 
 function findComplexity(file) {
     var funcObj = {};
@@ -28,6 +30,6 @@ function findComplexity(file) {
             }
         }
     });
-    return funcObj;
+    console.log(funcObj);
 }
 })();

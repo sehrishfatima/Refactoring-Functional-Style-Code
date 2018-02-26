@@ -1,8 +1,10 @@
+module.exports = main;
 var fs = require('fs');
 var esprima = require('esprima');
 var estraverse = require('estraverse');
 var escodegen = require('escodegen');
 const escomplex = require('escomplex');
+var sloc = require('sloc');
 const util = require('util')
 var filename = process.argv[2];
 var fileOutput;
@@ -183,7 +185,8 @@ function main(){
         var code = fs.readFileSync('../../in/'+filename,{encoding: 'utf8'});
     generate_the_ast(code);
 
-    console.log(escomplex.analyse(fs.readFileSync('../../in/foreach.js')));
+    console.log(escomplex.analyse(fs.readFileSync('../../in/'+filename, {encoding: 'utf8'})));
+    console.log(escomplex.analyse(fs.readFileSync('../../out/'+fileOutput, {encoding: 'utf8'})));
 });
 }
 main();
