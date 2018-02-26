@@ -2,8 +2,10 @@ var fs = require('fs');
 var esprima = require('esprima');
 var estraverse = require('estraverse');
 var escodegen = require('escodegen');
+const escomplex = require('escomplex');
 const util = require('util')
 var filename = process.argv[2];
+var fileOutput;
 console.log('Processing', filename);
 var done = false;
 var loopAST;
@@ -160,7 +162,10 @@ function generate_the_ast(recievedCode){
         }
     });
 
-    console.log(escodegen.generate(ast));
+    var out = escodegen.generate(ast);
+    //write to file
+    fs.writeFileSync('../../out/'+fileOutput, out);
+
 
 }
 /*
@@ -177,8 +182,10 @@ function main(){
     fs.readdirSync("../../in").forEach(filename=>{
         var code = fs.readFileSync('../../in/'+filename,{encoding: 'utf8'});
     generate_the_ast(code);
+
+    console.log(escomplex.analyse(fs.readFileSync('../../in/foreach.js')));
 });
-    //var code = fs.readFileSync('./foreach.js', { encoding: 'utf8'});
-    //generate_the_ast(code);
 }
 main();
+
+//Result = escomplex.analyse(fs.readFileSync(pathToFileToAnalyse)) //For cyclomatic complexity
