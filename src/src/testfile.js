@@ -185,8 +185,47 @@ function main(){
         var code = fs.readFileSync('../../in/'+filename,{encoding: 'utf8'});
     generate_the_ast(code);
 
-    console.log(escomplex.analyse(fs.readFileSync('../../in/'+filename, {encoding: 'utf8'})));
-    console.log(escomplex.analyse(fs.readFileSync('../../out/'+fileOutput, {encoding: 'utf8'})));
+        /*console.log(escomplex.analyse(fs.readFileSync('../../in/' + filename, {encoding: 'utf8'})));
+        console.log(escomplex.analyse(fs.readFileSync('../../out/' + fileOutput, {encoding: 'utf8'})));
+    */
+    var previousFile = fs.readFileSync('../../in/'+filename, 'utf8');
+    var newFile = fs.readFileSync('../../out/'+fileOutput, 'utf8');
+
+
+    /*function findComplexity(file) {
+        var funcObj = {};
+        var ast = esprima.parse(file.toString(), { loc: true });
+        estraverse.traverse(ast, {
+            enter: function (node, parent) {
+                if (node.type === "FunctionDeclaration" && node.id && node.id.name) {
+                    var complexSloc = escomplex.analyse(escodegen.generate(node));
+                    funcObj[node.id.name] = {
+                        'complexity': complexSloc.aggregate.cyclomatic,
+                        'lines': complexSloc.aggregate.sloc.logical
+                    };
+                }
+            }
+        });
+        console.log(funcObj);
+    }*/
+
+     function findComplexity(file) {
+        var funcObj = {};
+        var result = new Object();
+        funcObj = escomplex.analyse(file);
+        slocValue = funcObj.aggregate.sloc.logical;
+        cycloValue = funcObj.aggregate.cyclomatic;
+        result[0] = slocValue;
+        result[1] = cycloValue;
+        return result;
+
+    }
+    var functionsBefore = findComplexity(previousFile);
+    var functionsAfter = findComplexity(newFile);
+
+    console.log("The values before Refactoring: ",functionsBefore);
+    console.log("The values after Refactoring: ",functionsAfter);
+
 });
 }
 main();
