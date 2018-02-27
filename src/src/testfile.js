@@ -5,7 +5,9 @@ var estraverse = require('estraverse');
 var escodegen = require('escodegen');
 const escomplex = require('escomplex');
 var sloc = require('sloc');
-const util = require('util')
+const util = require('util');
+var now = require("performance-now");
+
 var filename = process.argv[2];
 var fileOutput;
 console.log('Processing', filename);
@@ -170,44 +172,20 @@ function generate_the_ast(recievedCode){
 
 
 }
-/*
-function read_it(filename,cb){
-
-
-    //...
-    cb(code)
-}
-*/
 
 function main(){
     //console.log('one level up')
     fs.readdirSync("../../in").forEach(filename=>{
         var code = fs.readFileSync('../../in/'+filename,{encoding: 'utf8'});
+    var t0 = now();
     generate_the_ast(code);
+    var t1 = now();
 
         /*console.log(escomplex.analyse(fs.readFileSync('../../in/' + filename, {encoding: 'utf8'})));
         console.log(escomplex.analyse(fs.readFileSync('../../out/' + fileOutput, {encoding: 'utf8'})));
     */
     var previousFile = fs.readFileSync('../../in/'+filename, 'utf8');
     var newFile = fs.readFileSync('../../out/'+fileOutput, 'utf8');
-
-
-    /*function findComplexity(file) {
-        var funcObj = {};
-        var ast = esprima.parse(file.toString(), { loc: true });
-        estraverse.traverse(ast, {
-            enter: function (node, parent) {
-                if (node.type === "FunctionDeclaration" && node.id && node.id.name) {
-                    var complexSloc = escomplex.analyse(escodegen.generate(node));
-                    funcObj[node.id.name] = {
-                        'complexity': complexSloc.aggregate.cyclomatic,
-                        'lines': complexSloc.aggregate.sloc.logical
-                    };
-                }
-            }
-        });
-        console.log(funcObj);
-    }*/
 
      function findComplexity(file) {
         var funcObj = {};
@@ -220,11 +198,14 @@ function main(){
         return result;
 
     }
+
     var functionsBefore = findComplexity(previousFile);
     var functionsAfter = findComplexity(newFile);
 
     console.log("The values before Refactoring: ",functionsBefore);
     console.log("The values after Refactoring: ",functionsAfter);
+    console.log("Call to generate Tree took " + (t1 - t0) + " milliseconds.")
+
 
 });
 }
