@@ -141,6 +141,381 @@ function forEachReturn(arrayName,body, replacedParameterName) {
             }
     }
 };
+function mapReturn(arrayName,body, replacedParameterName) {
+    console.log(arrayName);
+    console.log(replacedParameterName);
+    return   {
+        "type"
+            :
+            "ForStatement",
+        "init"
+            :
+            {
+                "type"
+                    :
+                    "VariableDeclaration",
+                "declarations"
+                    :
+                    [
+                        {
+                            "type": "VariableDeclarator",
+                            "id": {
+                                "type": "Identifier",
+                                "name": "i"
+                            },
+                            "init": {
+                                "type": "Literal",
+                                "value": 0,
+                                "raw": "0"
+                            }
+                        }
+                    ],
+                "kind"
+                    :
+                    "var"
+            }
+        ,
+        "test"
+            :
+            {
+                "type"
+                    :
+                    "BinaryExpression",
+                "operator"
+                    :
+                    "<",
+                "left"
+                    :
+                    {
+                        "type"
+                            :
+                            "Identifier",
+                        "name"
+                            :
+                            "i"
+                    }
+                ,
+                "right"
+                    :
+                    {
+                        "type"
+                            :
+                            "MemberExpression",
+                        "computed"
+                            :
+                            false,
+                        "object"
+                            :
+                            {
+                                "type"
+                                    :
+                                    "Identifier",
+                                "name"
+                                    :
+                                arrayName
+                            }
+                        ,
+                        "property"
+                            :
+                            {
+                                "type"
+                                    :
+                                    "Identifier",
+                                "name"
+                                    :
+                                    "length"
+                            }
+                    }
+            }
+        ,
+        "update"
+            :
+            {
+                "type"
+                    :
+                    "UpdateExpression",
+                "operator"
+                    :
+                    "++",
+                "argument"
+                    :
+                    {
+                        "type"
+                            :
+                            "Identifier",
+                        "name"
+                            :
+                            "i"
+                    }
+                ,
+                "prefix"
+                    :
+                    false
+            }
+        ,
+        "body"
+            :
+            {
+                "type"
+                    :
+                    "BlockStatement",
+                "body"
+                    :
+                body
+            }
+    }
+};
+function reduceReturn(arrayName,body, replacedParameterName) {
+    console.log(arrayName);
+    console.log(replacedParameterName);
+    return   {
+        "type"
+            :
+            "ForStatement",
+        "init"
+            :
+            {
+                "type"
+                    :
+                    "VariableDeclaration",
+                "declarations"
+                    :
+                    [
+                        {
+                            "type": "VariableDeclarator",
+                            "id": {
+                                "type": "Identifier",
+                                "name": "i"
+                            },
+                            "init": {
+                                "type": "Literal",
+                                "value": 0,
+                                "raw": "0"
+                            }
+                        }
+                    ],
+                "kind"
+                    :
+                    "var"
+            }
+        ,
+        "test"
+            :
+            {
+                "type"
+                    :
+                    "BinaryExpression",
+                "operator"
+                    :
+                    "<",
+                "left"
+                    :
+                    {
+                        "type"
+                            :
+                            "Identifier",
+                        "name"
+                            :
+                            "i"
+                    }
+                ,
+                "right"
+                    :
+                    {
+                        "type"
+                            :
+                            "MemberExpression",
+                        "computed"
+                            :
+                            false,
+                        "object"
+                            :
+                            {
+                                "type"
+                                    :
+                                    "Identifier",
+                                "name"
+                                    :
+                                arrayName
+                            }
+                        ,
+                        "property"
+                            :
+                            {
+                                "type"
+                                    :
+                                    "Identifier",
+                                "name"
+                                    :
+                                    "length"
+                            }
+                    }
+            }
+        ,
+        "update"
+            :
+            {
+                "type"
+                    :
+                    "UpdateExpression",
+                "operator"
+                    :
+                    "++",
+                "argument"
+                    :
+                    {
+                        "type"
+                            :
+                            "Identifier",
+                        "name"
+                            :
+                            "i"
+                    }
+                ,
+                "prefix"
+                    :
+                    false
+            }
+        ,
+        "body"
+            :
+            {
+                "type"
+                    :
+                    "BlockStatement",
+                "body"
+                    :
+                body
+            }
+    }
+};
+function filterReturn(arrayName,body, replacedParameterName) {
+    console.log(arrayName);
+    console.log(replacedParameterName);
+    return   {
+        "type"
+            :
+            "ForStatement",
+        "init"
+            :
+            {
+                "type"
+                    :
+                    "VariableDeclaration",
+                "declarations"
+                    :
+                    [
+                        {
+                            "type": "VariableDeclarator",
+                            "id": {
+                                "type": "Identifier",
+                                "name": "i"
+                            },
+                            "init": {
+                                "type": "Literal",
+                                "value": 0,
+                                "raw": "0"
+                            }
+                        }
+                    ],
+                "kind"
+                    :
+                    "var"
+            }
+        ,
+        "test"
+            :
+            {
+                "type"
+                    :
+                    "BinaryExpression",
+                "operator"
+                    :
+                    "<",
+                "left"
+                    :
+                    {
+                        "type"
+                            :
+                            "Identifier",
+                        "name"
+                            :
+                            "i"
+                    }
+                ,
+                "right"
+                    :
+                    {
+                        "type"
+                            :
+                            "MemberExpression",
+                        "computed"
+                            :
+                            false,
+                        "object"
+                            :
+                            {
+                                "type"
+                                    :
+                                    "Identifier",
+                                "name"
+                                    :
+                                arrayName
+                            }
+                        ,
+                        "property"
+                            :
+                            {
+                                "type"
+                                    :
+                                    "Identifier",
+                                "name"
+                                    :
+                                    "length"
+                            }
+                    }
+            }
+        ,
+        "update"
+            :
+            {
+                "type"
+                    :
+                    "UpdateExpression",
+                "operator"
+                    :
+                    "++",
+                "argument"
+                    :
+                    {
+                        "type"
+                            :
+                            "Identifier",
+                        "name"
+                            :
+                            "i"
+                    }
+                ,
+                "prefix"
+                    :
+                    false
+            }
+        ,
+        "body"
+            :
+            {
+                "type"
+                    :
+                    "BlockStatement",
+                "body"
+                    :
+                body
+            }
+    }
+};
+
+
+
 
 function assignBodyVariable(statement){
     return esprima.parse(statement).body[0];
