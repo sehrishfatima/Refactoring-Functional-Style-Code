@@ -7,11 +7,13 @@ const escomplex = require('escomplex');
 var sloc = require('sloc');
 const util = require('util');
 var now = require("performance-now");
+var out;
 
 var filename = process.argv[2];
 var fileOutput;
+
 console.log('Processing', filename);
-var done = false;
+//var done = false;
 var loopAST;
 
 
@@ -144,7 +146,7 @@ function assignBodyVariable(statement){
     return esprima.parse(statement).body[0];
 }
 
-function generate_the_ast(recievedCode){
+function generate_the_ast(recievedCode,filename){
     var ast = esprima.parse(recievedCode);
     estraverse.replace(ast,{
         enter: function (node) {
@@ -167,18 +169,22 @@ function generate_the_ast(recievedCode){
     });
 
     var out = escodegen.generate(ast);
+    fs.writeFileSync('../../out/'+filename, out);
+
+
     //write to file
-    fs.writeFileSync('../../out/'+fileOutput, out);
 
 
 }
 
 function main(){
     //console.log('one level up')
+
     fs.readdirSync("../../in").forEach(filename=>{
         var code = fs.readFileSync('../../in/'+filename,{encoding: 'utf8'});
     var t0 = now();
-    generate_the_ast(code);
+
+    generate_the_ast(code,filename);
     var t1 = now();
 
         /*console.log(escomplex.analyse(fs.readFileSync('../../in/' + filename, {encoding: 'utf8'})));

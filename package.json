@@ -13,7 +13,13 @@
     "escomplex": "^2.0.0-alpha",
     "esprima": "^4.0.0",
     "estraverse": "^4.2.0",
+    "fs-file-sync-fd": "^0.1.0",
+    "lodash": "^4.17.5",
+    "minimist": "^1.2.0",
+    "optimist": "^0.6.1",
     "performance-now": "^2.1.0",
+    "rimraf": "^2.6.2",
+    "semver": "^5.5.0",
     "sloc": "^0.2.0"
   }
 }
