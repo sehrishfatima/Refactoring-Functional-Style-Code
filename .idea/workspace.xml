@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eaf31193-2627-4f19-9574-f2615955eabc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/filter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/src/refactorfilter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/src/refactorreduce.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/map.js" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/in/map.js" afterPath="$PROJECT_DIR$/src/src/map.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/src/reduce.js" afterPath="$PROJECT_DIR$/in/reduce.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/filter.js" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/src/refactoring.js" afterPath="$PROJECT_DIR$/src/src/refactorforeach.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/src/filter.js" afterPath="$PROJECT_DIR$/src/src/filter.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/esprima/package.json" afterPath="$PROJECT_DIR$/node_modules/esprima/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sloc/package.json" afterPath="$PROJECT_DIR$/node_modules/sloc/package.json" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,15 +16,23 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file leaf-file-name="testfile.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/src/testfile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
-              <caret line="151" column="19" lean-forward="true" selection-start-line="151" selection-start-column="19" selection-end-line="151" selection-end-column="19" />
+            <state relative-caret-position="-244">
+              <caret line="179" column="0" lean-forward="false" selection-start-line="179" selection-start-column="0" selection-end-line="179" selection-end-column="0" />
               <folding>
                 <element signature="n#!!block;n#forEachReturn#0" expanded="false" />
-                <element signature="n#!!block;n#main#0" expanded="false" />
+                <marker date="1519914026785" expanded="false" signature="3993:4819" ph="{...}" />
+                <marker date="1519914026785" expanded="true" signature="4065:4701" ph="{...}" />
+                <marker date="1519914026785" expanded="true" signature="4098:4642" ph="{...}" />
+                <marker date="1519914026785" expanded="true" signature="4233:4632" ph="{...}" />
+                <marker date="1519914026785" expanded="true" signature="4683:4695" ph="{...}" />
+                <marker date="1519914026785" expanded="true" signature="4836:6097" ph="{...}" />
+                <marker date="1519914026785" expanded="true" signature="4922:4999" ph="{...}" />
+                <marker date="1519914026785" expanded="true" signature="5088:5293" ph="/*...*/" />
+                <marker date="1519914026785" expanded="true" signature="5468:5769" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -36,8 +41,8 @@
       <file leaf-file-name="refactorreduce.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/src/refactorreduce.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="165" column="29" lean-forward="false" selection-start-line="165" selection-start-column="29" selection-end-line="165" selection-end-column="29" />
+            <state relative-caret-position="215">
+              <caret line="187" column="18" lean-forward="false" selection-start-line="187" selection-start-column="18" selection-end-line="187" selection-end-column="18" />
               <folding>
                 <element signature="n#!!block;n#reduceReturn#0" expanded="false" />
               </folding>
@@ -45,24 +50,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="reduce.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/out/reduce.js">
+      <file leaf-file-name="refactorforeach.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/src/refactorforeach.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="13" />
-              <folding />
+            <state relative-caret-position="15">
+              <caret line="7" column="29" lean-forward="false" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+              <folding>
+                <element signature="n#!!block;n#forEachReturn#0" expanded="false" />
+                <element signature="n#!!block;n#mapReturn#0" expanded="false" />
+                <element signature="n#!!block;n#reduceReturn#0" expanded="false" />
+                <element signature="n#!!block;n#filterReturn#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="reduce.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/in/reduce.js">
+      <file leaf-file-name="refactormap.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/src/refactormap.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="33" lean-forward="false" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state relative-caret-position="18">
+              <caret line="1" column="14" lean-forward="false" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -85,6 +93,7 @@
       <find>done</find>
       <find>code</find>
       <find>forea</find>
+      <find>outp</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -113,14 +122,15 @@
         <option value="$PROJECT_DIR$/in/rimraf.js" />
         <option value="$PROJECT_DIR$/in/lodash.js" />
         <option value="$PROJECT_DIR$/src/src/refactoring.js" />
-        <option value="$PROJECT_DIR$/src/src/testfile.js" />
         <option value="$PROJECT_DIR$/in/map.js" />
-        <option value="$PROJECT_DIR$/src/src/refactormap.js" />
         <option value="$PROJECT_DIR$/src/src/refactorfilter.js" />
         <option value="$PROJECT_DIR$/in/filter.js" />
         <option value="$PROJECT_DIR$/src/src/reduce.js" />
-        <option value="$PROJECT_DIR$/src/src/refactorreduce.js" />
         <option value="$PROJECT_DIR$/in/reduce.js" />
+        <option value="$PROJECT_DIR$/src/src/testfile.js" />
+        <option value="$PROJECT_DIR$/out/foreach.js" />
+        <option value="$PROJECT_DIR$/src/src/refactorreduce.js" />
+        <option value="$PROJECT_DIR$/src/src/refactormap.js" />
       </list>
     </option>
   </component>
@@ -155,8 +165,6 @@
     <panes>
       <pane id="PackagesPane" />
       <pane id="AndroidView" />
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -168,11 +176,6 @@
               <item name="Refactoring-Functional-Code" type="b2602c69:ProjectViewProjectNode" />
               <item name="Refactoring-Functional-Code" type="462c0819:PsiDirectoryNode" />
               <item name="in" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Refactoring-Functional-Code" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Refactoring-Functional-Code" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Refactoring-Functional-Code" type="b2602c69:ProjectViewProjectNode" />
@@ -189,6 +192,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -196,9 +201,13 @@
     <property name="aspect.path.notification.shown" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/in" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/in" />
       <recent name="$PROJECT_DIR$/src/src" />
+      <recent name="$PROJECT_DIR$/node_modules" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -317,16 +326,17 @@
       <workItem from="1519236738918" duration="3122000" />
       <workItem from="1519396944663" duration="1649000" />
       <workItem from="1519643327113" duration="21915000" />
-      <workItem from="1519823260200" duration="12705000" />
+      <workItem from="1519823260200" duration="12814000" />
+      <workItem from="1519900702777" duration="7233000" />
+      <workItem from="1519913494808" duration="547000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66513000" />
+    <option name="totallyTimeSpent" value="74402000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="806" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -340,7 +350,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35319766" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27825466" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28540772" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -422,28 +432,14 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/src/refactormap.js</url>
           <line>156</line>
-          <properties />
           <option name="timeStamp" value="13" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/src/refactorreduce.js</url>
-          <line>19</line>
-          <properties />
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="15" />
+      <option name="time" value="16" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/src/forreduce.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/src/foreach.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -466,7 +462,15 @@
           <caret line="309" column="2" lean-forward="false" selection-start-line="309" selection-start-column="2" selection-end-line="309" selection-end-column="2" />
           <folding>
             <element signature="n#!!block;n#forEachReturn#0" expanded="false" />
-            <element signature="n#!!block;n#main#0" expanded="false" />
+            <marker date="1519914026785" expanded="false" signature="3993:4819" ph="{...}" />
+            <marker date="1519914026785" expanded="true" signature="4065:4701" ph="{...}" />
+            <marker date="1519914026785" expanded="true" signature="4098:4642" ph="{...}" />
+            <marker date="1519914026785" expanded="true" signature="4233:4632" ph="{...}" />
+            <marker date="1519914026785" expanded="true" signature="4683:4695" ph="{...}" />
+            <marker date="1519914026785" expanded="true" signature="4836:6097" ph="{...}" />
+            <marker date="1519914026785" expanded="true" signature="4922:4999" ph="{...}" />
+            <marker date="1519914026785" expanded="true" signature="5088:5293" ph="/*...*/" />
+            <marker date="1519914026785" expanded="true" signature="5468:5769" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -485,7 +489,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/src/map.js">
+    <entry file="file://$PROJECT_DIR$/in/map.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="8" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="48" />
@@ -522,12 +526,20 @@
           <caret line="12" column="78" lean-forward="true" selection-start-line="12" selection-start-column="78" selection-end-line="12" selection-end-column="78" />
           <folding>
             <element signature="n#!!block;n#forEachReturn#0" expanded="false" />
-            <element signature="n#!!block;n#main#0" expanded="false" />
+            <marker date="1519914026785" expanded="false" signature="3993:4819" ph="{...}" />
+            <marker date="1519914026785" expanded="true" signature="4065:4701" ph="{...}" />
+            <marker date="1519914026785" expanded="true" signature="4098:4642" ph="{...}" />
+            <marker date="1519914026785" expanded="true" signature="4233:4632" ph="{...}" />
+            <marker date="1519914026785" expanded="true" signature="4683:4695" ph="{...}" />
+            <marker date="1519914026785" expanded="true" signature="4836:6097" ph="{...}" />
+            <marker date="1519914026785" expanded="true" signature="4922:4999" ph="{...}" />
+            <marker date="1519914026785" expanded="true" signature="5088:5293" ph="/*...*/" />
+            <marker date="1519914026785" expanded="true" signature="5468:5769" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/src/map.js">
+    <entry file="file://$PROJECT_DIR$/in/map.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="8" lean-forward="false" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
@@ -598,7 +610,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="1" lean-forward="false" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -607,7 +618,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
           <caret line="14" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -654,35 +664,14 @@
         <state relative-caret-position="60">
           <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/out/undefined.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/out/undefined.js" />
     <entry file="file://$PROJECT_DIR$/out/as.js" />
-    <entry file="file://$PROJECT_DIR$/out/undefined">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/src/foreach.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="3" lean-forward="false" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/out/undefined" />
     <entry file="file://$PROJECT_DIR$/src/src/minimist.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3510">
@@ -723,31 +712,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/out/foreach.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/foreach1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/map.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/src/map.js">
+    <entry file="file://$PROJECT_DIR$/out/foreach1.js" />
+    <entry file="file://$PROJECT_DIR$/in/map.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="2" lean-forward="true" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
@@ -755,24 +721,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/src/refactoring.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="16" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="595" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!block;n#forEachReturn#0" expanded="false" />
-            <element signature="n#!!block;n#mapReturn#0" expanded="false" />
-            <element signature="n#!!block;n#reduceReturn#0" expanded="false" />
-            <element signature="n#!!block;n#filterReturn#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/src/filter.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -786,44 +738,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/src/testfile.js">
+    <entry file="file://$PROJECT_DIR$/out/filter.js" />
+    <entry file="file://$PROJECT_DIR$/src/src/reduce.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="151" column="19" lean-forward="true" selection-start-line="151" selection-start-column="19" selection-end-line="151" selection-end-column="19" />
-          <folding>
-            <element signature="n#!!block;n#forEachReturn#0" expanded="false" />
-            <element signature="n#!!block;n#main#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/src/refactormap.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="200" column="18" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="224" selection-end-column="0" />
+        <state relative-caret-position="119">
+          <caret line="7" column="20" lean-forward="true" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/src/refactorreduce.js">
+    <entry file="file://$PROJECT_DIR$/src/src/foreach.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="165" column="29" lean-forward="false" selection-start-line="165" selection-start-column="29" selection-end-line="165" selection-end-column="29" />
-          <folding>
-            <element signature="n#!!block;n#reduceReturn#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/reduce.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="13" />
+        <state relative-caret-position="45">
+          <caret line="3" column="3" lean-forward="false" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/out/filter.js">
+    <entry file="file://$PROJECT_DIR$/src/src/reduce.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -831,13 +763,69 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/in/reduce.js">
+    <entry file="file://$PROJECT_DIR$/out/map.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="33" lean-forward="false" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/reduce.js" />
+    <entry file="file://$PROJECT_DIR$/out/foreach.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="25" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/src/testfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-244">
+          <caret line="179" column="0" lean-forward="false" selection-start-line="179" selection-start-column="0" selection-end-line="179" selection-end-column="0" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!block;n#forEachReturn#0" expanded="false" />
+            <marker date="1519914026785" expanded="false" signature="3993:4819" ph="{...}" />
+            <marker date="1519914026785" expanded="true" signature="4065:4701" ph="{...}" />
+            <marker date="1519914026785" expanded="true" signature="4098:4642" ph="{...}" />
+            <marker date="1519914026785" expanded="true" signature="4233:4632" ph="{...}" />
+            <marker date="1519914026785" expanded="true" signature="4683:4695" ph="{...}" />
+            <marker date="1519914026785" expanded="true" signature="4836:6097" ph="{...}" />
+            <marker date="1519914026785" expanded="true" signature="4922:4999" ph="{...}" />
+            <marker date="1519914026785" expanded="true" signature="5088:5293" ph="/*...*/" />
+            <marker date="1519914026785" expanded="true" signature="5468:5769" ph="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/src/refactorreduce.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="187" column="18" lean-forward="false" selection-start-line="187" selection-start-column="18" selection-end-line="187" selection-end-column="18" />
+          <folding>
+            <element signature="n#!!block;n#reduceReturn#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/src/refactorforeach.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="7" column="29" lean-forward="false" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+          <folding>
+            <element signature="n#!!block;n#forEachReturn#0" expanded="false" />
+            <element signature="n#!!block;n#mapReturn#0" expanded="false" />
+            <element signature="n#!!block;n#reduceReturn#0" expanded="false" />
+            <element signature="n#!!block;n#filterReturn#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/src/refactormap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="14" lean-forward="false" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
