@@ -17,7 +17,7 @@ console.log('Processing', filename);
 var loopAST;
 
 
-function forEachReturn(arrayName,body, replacedParameterName) {
+function refactorReturn(arrayName,body, replacedParameterName) {
     console.log(arrayName);
     console.log(replacedParameterName);
     return   {
@@ -150,7 +150,15 @@ function generate_the_ast(recievedCode,filename){
     var ast = esprima.parse(recievedCode);
     estraverse.replace(ast,{
         enter: function (node) {
-            if (node.type == 'ExpressionStatement' &&
+
+            switch(node.type == 'ExpressionStatement' && node.expression.type == 'CallExpression' &&
+            node.expression.callee.property.name == "forEach"){
+
+                case
+
+            }
+
+            /*if (node.type == 'ExpressionStatement' && node.expression.type == 'CallExpression' &&
                 node.expression.callee.property.name == "forEach")
             {
                 var arrayName = node.expression.callee.object.name;
@@ -159,9 +167,45 @@ function generate_the_ast(recievedCode,filename){
                 var functionArgument = node.expression.arguments[0].params[0].name;
                 body.splice(0,0,assignBodyVariable("var "+functionArgument+"=arr[i];"));
 
-                return forEachReturn(arrayName, body, functionArgument);
+                return refactorReturn(arrayName, body, functionArgument);
 
             }
+            else if (node.type == 'ExpressionStatement' &&  node.expression.type == 'CallExpression' &&
+                node.expression.callee.property.name == "map")
+            {
+                var arrayName = node.expression.callee.object.name;
+                var body = node.expression.arguments[0].body.body;
+
+                var functionArgument = node.expression.arguments[0].params[0].name;
+                body.splice(0,0,assignBodyVariable("var "+functionArgument+"=arr[i];"));
+
+                return refactorReturn(arrayName, body, functionArgument);
+
+            }
+            else if (node.type == 'ExpressionStatement' &&  node.expression.type == 'CallExpression' &&
+                node.expression.callee.property.name == "reduce")
+            {
+                var arrayName = node.expression.callee.object.name;
+                var body = node.expression.arguments[0].body.body;
+
+                var functionArgument = node.expression.arguments[0].params[0].name;
+                body.splice(0,0,assignBodyVariable("var "+functionArgument+"=arr[i];"));
+
+                return refactorReturn(arrayName, body, functionArgument);
+
+            }
+            else (node.type == 'ExpressionStatement' && node.expression.type == 'CallExpression' &&
+                node.expression.callee.property.name == "filter")
+            {
+                var arrayName = node.expression.callee.object.name;
+                var body = node.expression.arguments[0].body.body;
+
+                var functionArgument = node.expression.arguments[0].params[0].name;
+                body.splice(0,0,assignBodyVariable("var "+functionArgument+"=arr[i];"));
+
+                return refactorReturn(arrayName, body, functionArgument);
+
+            }*/
         },
         leave: function (node, parent) {
 
@@ -178,7 +222,6 @@ function generate_the_ast(recievedCode,filename){
 }
 
 function main(){
-    //console.log('one level up')
 
     fs.readdirSync("../../in").forEach(filename=>{
         var code = fs.readFileSync('../../in/'+filename,{encoding: 'utf8'});
@@ -187,13 +230,10 @@ function main(){
     generate_the_ast(code,filename);
     var t1 = now();
 
-        /*console.log(escomplex.analyse(fs.readFileSync('../../in/' + filename, {encoding: 'utf8'})));
-        console.log(escomplex.analyse(fs.readFileSync('../../out/' + fileOutput, {encoding: 'utf8'})));
-    */
     var previousFile = fs.readFileSync('../../in/'+filename, 'utf8');
     var newFile = fs.readFileSync('../../out/'+filename, 'utf8');
 
-     function findComplexity(file) {
+    function findComplexity(file) {
         var funcObj = {};
         var result = new Object();
         funcObj = escomplex.analyse(file);
