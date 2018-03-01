@@ -152,13 +152,9 @@ function generate_the_ast(recievedCode,filename){
         enter: function (node) {
 
             switch(node.type == 'ExpressionStatement' && node.expression.type == 'CallExpression' &&
-            node.expression.callee.property.name == "forEach"){
+            node.expression.callee.property.name == "forEach")
 
-                case
-
-            }
-
-            /*if (node.type == 'ExpressionStatement' && node.expression.type == 'CallExpression' &&
+            if (node.type == 'ExpressionStatement' && node.expression.type == 'CallExpression' &&
                 node.expression.callee.property.name == "forEach")
             {
                 var arrayName = node.expression.callee.object.name;
@@ -205,7 +201,7 @@ function generate_the_ast(recievedCode,filename){
 
                 return refactorReturn(arrayName, body, functionArgument);
 
-            }*/
+            }
         },
         leave: function (node, parent) {
 
