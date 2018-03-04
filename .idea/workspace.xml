@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eaf31193-2627-4f19-9574-f2615955eabc" name="Default" comment="">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/src/filter.js" afterPath="$PROJECT_DIR$/in/filter.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/src/map.js" afterPath="$PROJECT_DIR$/in/map.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/src/reduce.js" afterPath="$PROJECT_DIR$/in/reduce.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/src/assignments.js" afterPath="$PROJECT_DIR$/src/src/assignments.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/src/refactor.js" afterPath="$PROJECT_DIR$/src/src/refactor.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,14 +19,95 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="refactor.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="refactor.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/src/refactor.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="226" column="26" lean-forward="false" selection-start-line="226" selection-start-column="26" selection-end-line="226" selection-end-column="26" />
+            <state relative-caret-position="257">
+              <caret line="243" column="50" lean-forward="false" selection-start-line="243" selection-start-column="50" selection-end-line="243" selection-end-column="50" />
               <folding>
                 <element signature="n#!!block;n#refactorReturn#0" expanded="false" />
+                <element signature="n#!!block;n#findComplexity#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="filter.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/in/filter.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="2" lean-forward="false" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="reduce.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/in/reduce.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="8" column="11" lean-forward="false" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="filter.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/out/filter.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="foreach.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/out/foreach.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="map.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/in/map.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="11" lean-forward="false" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="map.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/out/map.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="testfile.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/src/testfile.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1918">
+              <caret line="14" column="34" lean-forward="false" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="foreach.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/in/foreach.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="3" lean-forward="false" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -46,6 +131,8 @@
       <find>code</find>
       <find>forea</find>
       <find>outp</find>
+      <find>print</find>
+      <find>console.log</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -73,17 +160,17 @@
         <option value="$PROJECT_DIR$/in/rimraf.js" />
         <option value="$PROJECT_DIR$/in/lodash.js" />
         <option value="$PROJECT_DIR$/src/src/refactoring.js" />
-        <option value="$PROJECT_DIR$/in/map.js" />
         <option value="$PROJECT_DIR$/src/src/refactorfilter.js" />
-        <option value="$PROJECT_DIR$/in/filter.js" />
         <option value="$PROJECT_DIR$/src/src/reduce.js" />
-        <option value="$PROJECT_DIR$/in/reduce.js" />
         <option value="$PROJECT_DIR$/out/foreach.js" />
         <option value="$PROJECT_DIR$/src/src/refactorreduce.js" />
         <option value="$PROJECT_DIR$/src/src/refactormap.js" />
         <option value="$PROJECT_DIR$/src/src/testfile.js" />
         <option value="$PROJECT_DIR$/src/src/assignments.js" />
+        <option value="$PROJECT_DIR$/in/map.js" />
+        <option value="$PROJECT_DIR$/in/reduce.js" />
         <option value="$PROJECT_DIR$/src/src/refactor.js" />
+        <option value="$PROJECT_DIR$/in/filter.js" />
       </list>
     </option>
   </component>
@@ -130,6 +217,11 @@
             <path>
               <item name="Refactoring-Functional-Style-Code" type="b2602c69:ProjectViewProjectNode" />
               <item name="Refactoring-Functional-Style-Code" type="462c0819:PsiDirectoryNode" />
+              <item name="in" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Refactoring-Functional-Style-Code" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Refactoring-Functional-Style-Code" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -150,15 +242,15 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/in" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/in" />
       <recent name="$PROJECT_DIR$/src/src" />
       <recent name="$PROJECT_DIR$/node_modules" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/in" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -281,7 +373,7 @@
       <workItem from="1519916361352" duration="5828000" />
       <workItem from="1520072434841" duration="116000" />
       <workItem from="1520096964517" duration="193000" />
-      <workItem from="1520179476645" duration="849000" />
+      <workItem from="1520179476645" duration="8147000" />
     </task>
     <task id="LOCAL-00001" summary="created refactor.js for 4 functions. testfile.js works for foreach only">
       <created>1519927614659</created>
@@ -294,11 +386,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81388000" />
+    <option name="totallyTimeSpent" value="88686000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="806" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -309,7 +400,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32994187" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35610464" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35610464" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29756796" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -401,7 +492,7 @@
           <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="16" />
+      <option name="time" value="18" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -427,7 +518,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/src/map.js" />
+    <entry file="file://$PROJECT_DIR$/in/map.js" />
     <entry file="file://$PROJECT_DIR$/src/src/assignments.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -456,7 +547,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/src/map.js" />
+    <entry file="file://$PROJECT_DIR$/in/map.js" />
     <entry file="file://$PROJECT_DIR$/src/src/formap.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -602,17 +693,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/out/foreach1.js" />
-    <entry file="file://$PROJECT_DIR$/src/src/map.js" />
-    <entry file="file://$PROJECT_DIR$/out/filter.js" />
-    <entry file="file://$PROJECT_DIR$/src/src/reduce.js" />
-    <entry file="file://$PROJECT_DIR$/in/foreach.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="3" lean-forward="false" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/src/reduce.js" />
+    <entry file="file://$PROJECT_DIR$/in/reduce.js" />
     <entry file="file://$PROJECT_DIR$/out/reduce.js" />
     <entry file="file://$PROJECT_DIR$/src/src/refactorforeach.js" />
     <entry file="file://$PROJECT_DIR$/src/src/refactoring.js" />
@@ -634,13 +715,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/src/filter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/src/refactorfilter.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="282">
@@ -648,15 +722,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/out/map.js" />
-    <entry file="file://$PROJECT_DIR$/src/src/testfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="152" column="53" lean-forward="false" selection-start-line="152" selection-start-column="53" selection-end-line="152" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/foreach.js" />
     <entry file="file://$PROJECT_DIR$/src/src/assignments.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -665,13 +730,78 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/in/foreach.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="3" lean-forward="false" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/src/testfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1918">
+          <caret line="14" column="34" lean-forward="false" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/foreach.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/filter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/in/map.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="11" lean-forward="false" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/map.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/in/reduce.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="8" column="11" lean-forward="false" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/src/refactor.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="226" column="26" lean-forward="false" selection-start-line="226" selection-start-column="26" selection-end-line="226" selection-end-column="26" />
+        <state relative-caret-position="257">
+          <caret line="243" column="50" lean-forward="false" selection-start-line="243" selection-start-column="50" selection-end-line="243" selection-end-column="50" />
           <folding>
             <element signature="n#!!block;n#refactorReturn#0" expanded="false" />
+            <element signature="n#!!block;n#findComplexity#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/in/filter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="2" lean-forward="false" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
+          <folding />
         </state>
       </provider>
     </entry>
