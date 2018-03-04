@@ -16,7 +16,7 @@ console.log('Processing', filename);
 //var done = false;
 var loopAST;
 
-
+//Returns the array name and replaced parameter in AST
 function refactorReturn(arrayName,body, replacedParameterName) {
     console.log(arrayName);
     console.log(replacedParameterName);
@@ -145,7 +145,7 @@ function refactorReturn(arrayName,body, replacedParameterName) {
 function assignBodyVariable(statement){
     return esprima.parse(statement).body[0];
 }
-
+//generate and replace the AST with the body of for loop
 function generate_the_ast(recievedCode,filename){
     var ast = esprima.parse(recievedCode);
     estraverse.replace(ast,{
@@ -209,6 +209,7 @@ function generate_the_ast(recievedCode,filename){
     });
 
     var out = escodegen.generate(ast);
+    //writes refactored code to the output file
     fs.writeFileSync('../../out/'+filename, out);
 
 
