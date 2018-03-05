@@ -9,8 +9,7 @@ console.log(total);
 
 var arr = [1, 2, 3];
 var result=arr.reduce(function (total, num) {
-    result = total+num;
-    console.log(result);
+    return total+num;
 }, 0);
 
 /*const euros = [29.76, 41.85, 46.5];
@@ -25,5 +24,18 @@ for(i=0;i<euros.length;i++){
     sum=sum+euros[i];
 }
 console.log(sum);
+
+
+
+var arr = [
+    1,
+    2,
+    3
+];
+var total = 0;
+for (i = 0; i < arr.length; i++) {
+    var num = arr[i];
+    total=total + num;
+}
 
 */

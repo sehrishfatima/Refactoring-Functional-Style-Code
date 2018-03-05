@@ -14,14 +14,11 @@ var out;
 var filename = process.argv[2];
 var fileOutput;
 
-console.log('Processing', filename);
-//var done = false;
 var loopAST;
 
 //Returns the array name and replaced parameter in AST
 function refactorForeach(arrayName,body, replacedParameterName) {
     console.log(arrayName);
-    //console.log(body);
     console.log(replacedParameterName);
     return   {
         "type"
@@ -146,10 +143,12 @@ function refactorForeach(arrayName,body, replacedParameterName) {
 };
 
 
+
 function refactorMap(arrayName,body, replacedParameterName,mappedArray) {
     console.log(arrayName);
     console.log(replacedParameterName);
-    return   {
+    console.log(mappedArray);
+    return {
         "type": "VariableDeclaration",
         "declarations": [
             {
@@ -165,8 +164,8 @@ function refactorMap(arrayName,body, replacedParameterName,mappedArray) {
             }
         ],
         "kind": "var"
-    },{
-
+    },
+        {
             "type": "ForStatement",
             "init": {
                 "type": "VariableDeclaration",
@@ -217,25 +216,24 @@ function refactorMap(arrayName,body, replacedParameterName,mappedArray) {
             },
             "body": {
                 "type": "BlockStatement",
-                "body":
-                body
+                "body": body
             }
-
-
         }
 
 }
-function refactorReduce(arrayName,body, replacedParameterName) {
+
+
+function refactorReduce(arrayName,body, replacedParameterName,accumulatingVariable) {
     console.log(arrayName);
     console.log(replacedParameterName);
-    return   {
+    return   [{
         "type": "VariableDeclaration",
         "declarations": [
             {
                 "type": "VariableDeclarator",
                 "id": {
                     "type": "Identifier",
-                    "name": "sum"
+                    "name": accumulatingVariable
                 },
                 "init": {
                     "type": "Literal",
@@ -247,7 +245,7 @@ function refactorReduce(arrayName,body, replacedParameterName) {
         "kind": "var"
     },
         {
-          "type": "ForStatement",
+            "type": "ForStatement",
             "init": {
                 "type": "AssignmentExpression",
                 "operator": "=",
@@ -293,133 +291,88 @@ function refactorReduce(arrayName,body, replacedParameterName) {
             "body": {
                 "type": "BlockStatement",
                 "body": body
+                    }
+
             }
-        }
+]
+
 };
-function refactorFilter(arrayName,body, replacedParameterName) {
+function refactorFilter(arrayName,body, replacedParameterName,filteredOutput) {
     console.log(arrayName);
     console.log(replacedParameterName);
-    return   {
-        "type"
-            :
-            "ForStatement",
-        "init"
-            :
+    return   [{
+        "type": "VariableDeclaration",
+        "declarations": [
             {
-                "type"
-                    :
-                    "VariableDeclaration",
-                "declarations"
-                    :
-                    [
-                        {
-                            "type": "VariableDeclarator",
-                            "id": {
-                                "type": "Identifier",
-                                "name": "i"
-                            },
-                            "init": {
-                                "type": "Literal",
-                                "value": 0,
-                                "raw": "0"
-                            }
+                "type": "VariableDeclarator",
+                "id": {
+                    "type": "Identifier",
+                    "name": filteredOutput
+                },
+                "init": {
+                    "type": "ArrayExpression",
+                    "elements": []
+                }
+            }
+        ],
+        "kind": "var"
+    },
+        {
+            "type": "ForStatement",
+            "init": {
+                "type": "VariableDeclaration",
+                "declarations": [
+                    {
+                        "type": "VariableDeclarator",
+                        "id": {
+                            "type": "Identifier",
+                            "name": "i"
+                        },
+                        "init": {
+                            "type": "Literal",
+                            "value": 0,
+                            "raw": "0"
                         }
-                    ],
-                "kind"
-                    :
-                    "var"
-            }
-        ,
-        "test"
-            :
-            {
-                "type"
-                    :
-                    "BinaryExpression",
-                "operator"
-                    :
-                    "<",
-                "left"
-                    :
-                    {
-                        "type"
-                            :
-                            "Identifier",
-                        "name"
-                            :
-                            "i"
                     }
-                ,
-                "right"
-                    :
-                    {
-                        "type"
-                            :
-                            "MemberExpression",
-                        "computed"
-                            :
-                            false,
-                        "object"
-                            :
-                            {
-                                "type"
-                                    :
-                                    "Identifier",
-                                "name"
-                                    :
-                                arrayName
-                            }
-                        ,
-                        "property"
-                            :
-                            {
-                                "type"
-                                    :
-                                    "Identifier",
-                                "name"
-                                    :
-                                    "length"
-                            }
+                ],
+                "kind": "var"
+            },
+            "test": {
+                "type": "BinaryExpression",
+                "operator": "<",
+                "left": {
+                    "type": "Identifier",
+                    "name": "i"
+                },
+                "right": {
+                    "type": "MemberExpression",
+                    "computed": false,
+                    "object": {
+                        "type": "Identifier",
+                        "name": arrayName
+                    },
+                    "property": {
+                        "type": "Identifier",
+                        "name": "length"
                     }
+                }
+            },
+            "update": {
+                "type": "UpdateExpression",
+                "operator": "++",
+                "argument": {
+                    "type": "Identifier",
+                    "name": "i"
+                },
+                "prefix": false
+            },
+            "body": {
+                "type": "BlockStatement",
+                "body": body
             }
-        ,
-        "update"
-            :
-            {
-                "type"
-                    :
-                    "UpdateExpression",
-                "operator"
-                    :
-                    "++",
-                "argument"
-                    :
-                    {
-                        "type"
-                            :
-                            "Identifier",
-                        "name"
-                            :
-                            "i"
-                    }
-                ,
-                "prefix"
-                    :
-                    false
-            }
-        ,
-        "body"
-            :
-            {
-                "type"
-                    :
-                    "BlockStatement",
-                "body"
-                    :
-                body
-            }
-    }
+        }]
 };
+
 
 
 
@@ -429,12 +382,10 @@ function assignBodyVariable(statement){
 }
 
 //replace the AST with the body of for loop
-function generate_the_ast(recievedCode,filename){
-    var ast = esprima.parse(recievedCode);
+function generate_the_ast(receivedCode,filename){
+    var ast = esprima.parse(receivedCode);
     estraverse.replace(ast,{
         enter: function (node) {
-
-
             if (node.type == 'ExpressionStatement' && node.expression.type == 'CallExpression' &&
                 node.expression.callee.property.name == "forEach")
 
@@ -452,44 +403,45 @@ function generate_the_ast(recievedCode,filename){
              else if (node.type == 'VariableDeclaration' &&  node.declarations[0].type == 'VariableDeclarator' && node.declarations[0].init.type == 'CallExpression' &&
                 node.declarations[0].init.callee.property.name == "map")
             {
-                console.log('blaaaaaaaaaaaaaaaaaaa');
+
                 var arrayName = node.declarations[0].init.callee.object.name;
                 var body = node.declarations[0].init.arguments[0].body.body;
-                var mappedArray = node.declarations[0].id.name ;
 
-                var functionArgument = node.declarations[0].init.arguments[0].params[0].name;
+
+                var functionArgument = node.declarations[0].init.arguments[0].params[1].name;
+                var mappedArray = node.declarations[0].id.name;
 
                 body.splice(0,0,assignBodyVariable("var "+functionArgument+"=arr[i];"));
-
                 return refactorMap(arrayName, body, functionArgument,mappedArray);
 
             }
              else if (node.type == 'VariableDeclaration' &&  node.declarations[0].type == 'VariableDeclarator' && node.declarations[0].init.type == 'CallExpression' &&
                 node.declarations[0].init.callee.property.name == "reduce")
             {
-                console.log('blaaaaaaaaaaaaaaaaaaa2222222');
                 var arrayName = node.declarations[0].init.callee.object.name;
                 var body = node.declarations[0].init.arguments[0].body.body;
+                var accumulatingVariable= node.declarations[0].id.name;
+
+                var functionArgument1 = node.declarations[0].init.arguments[0].params[1].name;
+
+                body.splice(0,0,assignBodyVariable("var "+functionArgument1+"=arr[i];"));
 
 
-                var functionArgument = node.declarations[0].init.arguments[0].params[0].name;
-
-                body.splice(0,0,assignBodyVariable("var "+functionArgument+"=arr[i];"));
-
-                return refactorReduce(arrayName, body, functionArgument);
+                return refactorReduce(arrayName, body, functionArgument1,accumulatingVariable);
 
             }
              else if (node.type == 'VariableDeclaration' &&  node.declarations[0].type == 'VariableDeclarator' && node.declarations[0].init.type == 'CallExpression' &&
                 node.declarations[0].init.callee.property.name == "filter")
             {
-                console.log('blaaaaaaaaaaaaaaaa3333333333');
+
                 var arrayName = node.declarations[0].init.callee.object.name;
                 var body = node.declarations[0].init.arguments[0].body.body;
 
+                var filteredOutput= node.declarations[0].id.name;
                 var functionArgument = node.declarations[0].init.arguments[0].params[0].name;
                 body.splice(0,0,assignBodyVariable("var "+functionArgument+"=array[i];"));
 
-                return refactorFilter(arrayName, body, functionArgument);
+                return refactorFilter(arrayName, body, functionArgument,filteredOutput);
 
             }
 

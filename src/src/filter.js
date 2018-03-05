@@ -10,5 +10,5 @@ words.filter(word => word.length > 6);
 var array = [24,18,7,6];
 var mappedArray = array.filter(function(age){
     age++
-    return age >=18;
+    console.log(age >=18);
 });

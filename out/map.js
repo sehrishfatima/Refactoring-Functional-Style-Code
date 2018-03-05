@@ -3,7 +3,8 @@ var arr = [
     2,
     3
 ];
-var mappedArray = arr.map(function (element) {
+for (var i = 0; i < arr.length; i++) {
+    var element = arr[i];
     element++;
     return element * 3;
-});
+}
