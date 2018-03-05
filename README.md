@@ -2,7 +2,7 @@
 ## Set up 
  To load the dependencies run `npm install`
 
-## We have put our code under `src/src/`. 
+ We have put our code under `src/src/`. 
 
 -`src/src/refactor.js`: This is our main component. It does all refactoring steps for a single js file. 
 			This main file refactors the functional style patterns to imperative code and also calculates their cyclomatic complexity, sloc and time taken to execute the codes.
