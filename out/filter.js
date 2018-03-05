@@ -1,9 +1,11 @@
-var words = [
-    'spray',
-    'limit',
-    'elite',
-    'exuberant',
-    'destruction',
-    'present'
+var array = [
+    24,
+    18,
+    7,
+    6
 ];
-words.filter(word => word.length > 6);
+for (var i = 0; i < array.length; i++) {
+    var age = array[i];
+    age++;
+    return age >= 18;
+}

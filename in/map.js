@@ -1,9 +1,9 @@
-var array = [
+var arr = [
     1,
     2,
     3
 ];
-var mappedArray = array.map(function (element) {
+var mappedArray = arr.map(function (element) {
     element++;
-    return element * 3;
+    console.log(element * 3);
 });
